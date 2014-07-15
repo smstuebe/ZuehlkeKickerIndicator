@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="#ffffff"
+    >
+	 <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+		android:orientation="vertical">    
+				
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="32sp"
+			android:layout_marginBottom="8px" 
+			android:layout_marginRight="8px" 
+			android:layout_marginLeft="8px"
+			local:MvxBind="BackgroundColor NativeColor(Color)">
+		 
+		</View>
+		 
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true">     
+			<ImageButton
+				android:id="@+id/kicker_state_reload"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				local:MvxBind="Click Reload"
+				android:src="@drawable/IconLoading"/>
+			<ImageButton
+				android:textSize="16sp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Start notifying"
+				local:MvxBind="Click StartService"
+				android:src="@drawable/StartNotifiy" />
+			<ImageButton
+				android:textSize="16sp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Stop notifying"
+				local:MvxBind="Click StopService" 
+				android:src="@drawable/StopNotifiy"/>
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>
