@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Zuehlke.KickerIndicator"
+             x:Class="Zuehlke.KickerIndicator.MainPage">
+
+    <StackLayout VerticalOptions="Center" 
+                 HorizontalOptions="Center">
+
+
+        <Image IsVisible="{Binding IsFree}"  Source="iconfree.png" HeightRequest="100" WidthRequest="100"  Aspect="AspectFill" HorizontalOptions="Center"></Image>
+        <Image IsVisible="{Binding IsOccupied}"  Source="iconnotfree.png" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" HorizontalOptions="Center"></Image>
+        <Label Text="{Binding Text}"  />
+        
+    </StackLayout>
+
+</ContentPage>
